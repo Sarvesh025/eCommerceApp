@@ -17,7 +17,7 @@ const navImg = {
 export default function Navbar3() {
   return (
     <div style={navbar3}>
-      <img style={navImg} src="../src/assets/banner2.png" alt="img..." />
+      <img style={navImg} src="/assets/banner2.png" alt="img..." />
     </div>
   )
 }

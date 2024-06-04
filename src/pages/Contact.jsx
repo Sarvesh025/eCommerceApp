@@ -78,7 +78,7 @@ export default function Contact() {
         </div>
         <img
           style={{ height: "85%" }}
-          src="../src/assets/contactImg.svg"
+          src="/assets/contactImg.svg"
           alt="img..."
         />
       </div>

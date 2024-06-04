@@ -30,13 +30,13 @@ export default function Category() {
 
   return (
     <div style={category}>
-     <Card img="../src/assets/code.jpg" desc="CODING" click = {()=>{setCode(!code)}}>
+     <Card img="/assets/code.jpg" desc="CODING" click = {()=>{setCode(!code)}}>
       {code && <FaCheck size={100} style={check}/>}
      </Card>
-     <Card img="../src/assets/horror.jpg" desc="HORROR" click = {()=>{setHorror(!horror)}}>
+     <Card img="/assets/horror.jpg" desc="HORROR" click = {()=>{setHorror(!horror)}}>
      {horror && <FaCheck size={100} style={check}/>}
      </Card>
-     <Card img="../src/assets/gym.jpg" desc="GYM" click = {()=>{setGym(!gym)}}>
+     <Card img="/assets/gym.jpg" desc="GYM" click = {()=>{setGym(!gym)}}>
      {gym && <FaCheck size={100} style={check}/>}
      </Card>
     </div>

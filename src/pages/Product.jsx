@@ -70,8 +70,8 @@ export default function Product() {
   const [count, setCount] = useState(0);
 
   const [cloths, setCloths] = useState({
-    front : "url('../src/assets/frontImg.png')",
-    back : "url('../src/assets/backImg.png')"
+    front : "url('/assets/frontImg.png')",
+    back : "url('/assets/backImg.png')"
   })
 
   const [selectedCloths, setSelectedCloths] = useState('tShirt');
@@ -260,20 +260,20 @@ const main = useRef();
 
     if(cloth === 'tShirt'){
       setCloths({
-        front:"url('../src/assets/frontImg.png')",
-        back:"url('../src/assets/backImg.png')"
+        front:"url('/assets/frontImg.png')",
+        back:"url('/assets/backImg.png')"
       })
     }
     else if(cloth === 'poloShirt'){
       setCloths({
-        front:"url('../src/assets/frontPolo.png')",
-        back:"url('../src/assets/backPolo.png')"
+        front:"url('/assets/frontPolo.png')",
+        back:"url('/assets/backPolo.png')"
       })
     }
     else{
       setCloths({
-        front:"url('../src/assets/frontHoodie.png')",
-        back:"url('../src/assets/backHoodie.png')"
+        front:"url('/assets/frontHoodie.png')",
+        back:"url('/assets/backHoodie.png')"
       })
     }
   }

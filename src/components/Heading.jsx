@@ -23,7 +23,7 @@ export default function Heading({navName}) {
   return (
     <div style={heading}>
         <h2 style={text}>{navName}</h2>
-      <img style={banner} src="../src/assets/image.png" alt="img..." />
+      <img style={banner} src="/assets/image.png" alt="img..." />
     </div>
   )
 }
