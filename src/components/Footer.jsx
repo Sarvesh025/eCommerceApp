@@ -2,7 +2,7 @@ import React from "react";
 
 const footer = {
   height: "45vh",
-  background: "url('../src/assets/footer.png')",
+  background: "url('/assets/footer.png')",
 };
 
 const links = {
