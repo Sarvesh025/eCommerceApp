@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <div style={navbar}>
       <div style={info}>
-        <img style={logo} src="../src/assets/tslogo.png" alt="" />
+        <img style={logo} src="/assets/tslogo.png" alt="logo" />
         <div>
             <button>Login</button>
         </div>

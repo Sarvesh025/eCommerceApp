@@ -14,8 +14,8 @@ const image = {
   width:'95%',
   height:'80%',
   border:'1px solid green',
-  cursor:'pointer'
-
+  cursor:'pointer',
+  position:'relative'
 }
 
 const description = {
