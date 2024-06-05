@@ -1,6 +1,8 @@
-import React from 'react'
-import 'remixicon/fonts/remixicon.css'
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react';
+import 'remixicon/fonts/remixicon.css';
+import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import Hamburger from 'hamburger-react';
 
 const navbar = {
     height:'12vh',
@@ -8,7 +10,7 @@ const navbar = {
     justifyContent:'space-between',
     alignItems:'center',
     background:'#3a3b3c'
-}
+};
 
 const info = {
     display: 'flex',
@@ -16,7 +18,7 @@ const info = {
     // border: '1px solid',
     width: '20%',
     justifyContent: 'space-around'
-}
+};
 
 const route = {
     width: 'calc(100% - 50%)',
@@ -24,13 +26,14 @@ const route = {
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center'
-}
+};
 
 const logo = {
   height:'8vh'
-}
+};
 
-export default function Navbar() {
+export default function Navbar({isOpen, setOpen}) {
+
   const location = useLocation();
   return (
     <div style={navbar}>
@@ -46,6 +49,7 @@ export default function Navbar() {
        <Link to='/about'style={location.pathname === '/about' ? {color:'#646cff'} : {color: 'white'}}><h3>About</h3></Link>
         {/* <h3><i className="ri-shopping-cart-2-line"/></h3> */}
       </div>
+      <Hamburger toggled={isOpen} toggle={setOpen} />
     </div>
   )
 }
