@@ -28,7 +28,7 @@ function App() {
     {/* <Provider store={store}> */}
    <Router>
    <Navbarcontainer/>
-    <RouteRender/>
+    {/* <RouteRender/> */}
     <div style={{minHeight:'83vh', display:'flex', flexDirection:'column'}}>
    <Routes>
     <Route path='/' element={<Home/>}/>

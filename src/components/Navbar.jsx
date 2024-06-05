@@ -36,15 +36,15 @@ export default function Navbar() {
     <div style={navbar}>
       <div style={info}>
         <img style={logo} src="/assets/tslogo.png" alt="logo" />
-        <div>
+        {/* <div>
             <button>Login</button>
-        </div>
+        </div> */}
       </div>
       <div style={route}>
        <Link to='/' style={location.pathname === '/' ? {color:'#646cff'} : {color: 'white'}}><h3>Home</h3></Link>
        <Link to='/contact' style={location.pathname === '/contact' ? {color:'#646cff'} : {color: 'white'}}><h3>Contact</h3></Link>
        <Link to='/about'style={location.pathname === '/about' ? {color:'#646cff'} : {color: 'white'}}><h3>About</h3></Link>
-        <h3><i className="ri-shopping-cart-2-line"/></h3>
+        {/* <h3><i className="ri-shopping-cart-2-line"/></h3> */}
       </div>
     </div>
   )
