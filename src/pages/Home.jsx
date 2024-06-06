@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import Products from '../components/Products'
+import Services from '../components/Services'
 import Whatsapp from '../components/Whatsapp'
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
     <div>
     <Banner/>
     {/* <Products/> */}
+    <Services/>
     <Whatsapp/>
     </div>
   )
