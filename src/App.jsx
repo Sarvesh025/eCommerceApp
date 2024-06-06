@@ -1,5 +1,4 @@
 import './App.css'
-import Footer from './components/Footer'
 import { BrowserRouter as Router, Routes as Routes ,Route as Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import Account from './pages/Account'
@@ -12,6 +11,7 @@ import Navbarcontainer from './components/Navbarcontainer'
 import Navbar2 from './components/Navbar2'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Footer from './components/Footer/index'
 // import {Provider} from 'react-redux'
 
 function App() {  

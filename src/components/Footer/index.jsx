@@ -1,34 +1,17 @@
 import React from "react";
-
-const footer = {
-  height: "45vh",
-  background: "url('/assets/footer.png')",
-};
-
-const links = {
-  display:'flex',
-  alignItems: 'flex-start',
-  justifyContent: 'space-around',
-  height:'65%'
-}
-
-const socialMedia = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-around',
-  height: '100%'
-}
+import styles from './footer.module.css';
+import { IoLogoWhatsapp, IoLogoInstagram, IoLogoFacebook, IoIosMail  } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <div style={footer}>
-        <p style={{textAlign:'center'}}>
+    <div className={styles.footer}>
+        <p className={styles.intro}>
           At our custom t-shirt company, we believe that every individual
           deserves to express their unique style and personality through their
           clothing. That’s why we offer high-quality, custom-designed t-shirts
           that are tailored to your preferences.
         </p>
-      <div style={links}>
+      <div className={styles.links}>
       <div>
         <h3>About Us</h3>
         <ul>
@@ -65,12 +48,12 @@ export default function Footer() {
         <li>Cookie Policy</li>
         </ul>
       </div>
-      <div style={socialMedia}>
-      <i className="ri-instagram-line"></i>
-      <i className="ri-facebook-circle-line"></i>
-      <i className="ri-whatsapp-line"></i>
-      <i className="ri-mail-line"></i>
       </div>
+      <div className={styles.socialMedia}>
+      <IoLogoInstagram size={30}/>
+      <IoLogoFacebook size={30}/>
+      <IoLogoWhatsapp size={30} />
+      <IoIosMail size={30} />
       </div>
     </div>
   );

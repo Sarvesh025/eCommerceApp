@@ -1,51 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import styles from './navbar.module.css'
 import 'remixicon/fonts/remixicon.css'
+import { RiMenu3Line } from "react-icons/ri";
 import { Link, useLocation } from 'react-router-dom'
-
-const navbar = {
-    height:'12vh',
-    display:'flex',
-    justifyContent:'space-between',
-    alignItems:'center',
-    background:'#3a3b3c'
-}
-
-const info = {
-    display: 'flex',
-    alignItems: 'center',
-    // border: '1px solid',
-    width: '20%',
-    justifyContent: 'space-around'
-}
-
-const route = {
-    width: 'calc(100% - 50%)',
-    // border: '1px solid',
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center'
-}
-
-const logo = {
-  height:'8vh'
-}
+import Menu from '../Menu'
 
 export default function Navbar() {
   const location = useLocation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth);
+  useEffect(() =>{
+    setIsMobile(window.innerWidth);
+  },[]);
+
+  function handelMenu(){
+    return(
+      <Menu/>
+    )
+  }
+
   return (
-    <div style={navbar}>
-      <div style={info}>
-        <img style={logo} src="/assets/tslogo.png" alt="logo" />
+    <div className={styles.navbar}>
+      <div className={styles.info}>
+        <img className={styles.logo} src="/assets/tslogo.png" alt="logo" />
         {/* <div>
             <button>Login</button>
         </div> */}
       </div>
-      <div style={route}>
+      {
+        isMobile > 786 ? 
+        <div className={styles.route}>
        <Link to='/' style={location.pathname === '/' ? {color:'#646cff'} : {color: 'white'}}><h3>Home</h3></Link>
        <Link to='/contact' style={location.pathname === '/contact' ? {color:'#646cff'} : {color: 'white'}}><h3>Contact</h3></Link>
        <Link to='/about'style={location.pathname === '/about' ? {color:'#646cff'} : {color: 'white'}}><h3>About</h3></Link>
         {/* <h3><i className="ri-shopping-cart-2-line"/></h3> */}
       </div>
+      :
+        <RiMenu3Line className={styles.menu} size={50} onClick={handelMenu}/>
+      }
     </div>
   )
 }

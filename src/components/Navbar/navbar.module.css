@@ -1,0 +1,37 @@
+.navbar {
+    height:12vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#3a3b3c;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    width: 20%;
+    justify-content: space-around;
+}
+
+.route {
+    width: calc(100% - 50%);
+    border: 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+  height: 8vh;
+}
+
+.menu{
+    /* display: none; */
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        /* display: block; */
+    }
+}
