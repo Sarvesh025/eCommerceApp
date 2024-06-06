@@ -14,3 +14,9 @@
     position: absolute;
     inset: 0;
 }
+
+@media screen and (max-width: 768px){
+   .card:hover{
+    position:static;
+   } 
+}
