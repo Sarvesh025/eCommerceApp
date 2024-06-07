@@ -7,7 +7,7 @@
 }
 
 .image{
-    background: url('./assets/printingMechine.png');
+    background: url('/assets/printingMechine.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 67%;
@@ -24,7 +24,7 @@
         display: none;
     }
     .process{
-        background:url('./assets/printingMechine.png');
+        background:url('/assets/printingMechine.png');
         background-repeat: no-repeat;
         background-size: cover;
         grid-template-columns: 1fr 1fr;
