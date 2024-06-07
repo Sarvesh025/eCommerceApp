@@ -1,0 +1,40 @@
+.modal{
+    width: 100vw;
+    height:0vh;
+    background-color: black;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
+    transition: height 300ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navlinkcontainer{
+    display: grid;
+    margin: auto;
+    width: fit-content;
+    grid-template-rows: auto;
+    gap: calc((100vw/ 393)* 90);
+    text-align: center;
+}
+
+.navlink{
+    text-decoration: none;
+    color: white;
+    font-size: calc((100vw/ 393)*20);
+    transition: transform 200ms ease-in-out;
+    font-weight: 700;
+
+}
+.navlink:hover{
+    transform: scale(1.25);
+}
+.active{
+    color: #646cff;
+    scale: 1.25;
+    transition: all 200ms ease-in-out;
+}
