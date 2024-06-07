@@ -24,7 +24,7 @@ export default function NavBar({ isOpen, setOpen }) {
         <Link to='/about' className={location.pathname === '/about' ? styles.active : ''}><h3>About</h3></Link>
         {/* <h3><i className="ri-shopping-cart-2-line"/></h3> */}
       </div>
-      <div>
+      <div className={styles.hamburgerCont}>
       <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
     </div>
