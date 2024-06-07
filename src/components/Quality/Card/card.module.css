@@ -2,13 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 53%;
-    padding: 10px 20px;
+    width: calc((100vw / 1920)* 1007);
+    padding: calc((100vw / 1920)* 15) calc((100vw / 1920)* 20);
     box-sizing: border-box;
     cursor: pointer;
     color: black;
-    height: 170px;
     overflow: hidden;
+    height: calc((100vw / 1920)* 180);
+    font-size: calc((100vw/1920)*16);
 }
 
 .cardContainer{
@@ -33,7 +34,7 @@
     justify-self: left;
     justify-items: right;
     background-image: linear-gradient(5deg, #535bf2, white);
-
+    text-align: end;
     >.cardContainer >.image {
         grid-area: 1 / 2;
     }
@@ -58,9 +59,9 @@
 
 @media screen and (max-width: 768px) {
     .card{
-        height: auto;
-        font-size: 12px;
-        width: 80%;
+        height: calc((100vw/393)*200);
+        font-size: calc((100vw/393)*10);
+        width: calc((100vw/393)*320);
         padding: 20px 20px;
     }
 }
