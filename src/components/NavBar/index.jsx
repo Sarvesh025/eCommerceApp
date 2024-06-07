@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Hamburger from 'hamburger-react';
 
 
-export default function Navbar({ isOpen, setOpen }) {
+export default function NavBar({ isOpen, setOpen }) {
 
   const location = useLocation();
   return (
