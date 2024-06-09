@@ -1,0 +1,50 @@
+.section{
+    background: #999b9d;
+    padding: 15px 0;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: #3a3b3c;
+    font-size: calc((100vw/1920)*18);
+}
+
+.scrollBtnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cards{
+    display: flex;
+    gap: 1rem;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.scrollButtons{
+    height: inherit;
+    width: fit-content;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius:50%;
+    background:white;
+    cursor: pointer;
+}
+
+.scrollButtons:hover{
+    background: grey;
+}
+
+@media screen and (max-width: 1100px){
+    .heading{
+        font-size: calc((100vw/393)*10);
+    }
+}

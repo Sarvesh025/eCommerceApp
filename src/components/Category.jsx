@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Card from './Card'
+import Card from './Card/index'
 // import { FaCheckCircle } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 

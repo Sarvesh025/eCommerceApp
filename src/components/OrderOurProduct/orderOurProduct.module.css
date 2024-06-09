@@ -1,0 +1,135 @@
+.orderOurProduct{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: calc((100vw / 1920)* 600);
+    width: calc((100vw / 1920)* 1200);
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc((100vw / 1920)* 20);
+    padding: calc((100vw / 1920)* 20);
+    /* box-sizing: border-box; */
+}
+
+.image{
+    /* grid-area: 1/1; */
+    /* grid-column: 1/1;
+    grid-row: 1/1; */
+    height: inherit;
+    /* width: inherit; */
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc((100vw / 1920)* 20);
+    color: black;
+    padding: calc((100vw / 1920)* 20);
+    box-sizing: border-box;
+}
+
+.heading{
+    font-size: calc((100vw/1920)*24);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: calc((100vw / 1920)* 15);
+    align-items: center;
+    font-size: calc((100vw / 1920)* 18);
+}
+
+.inputBoxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sizeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc((100vw / 1920)* 20);
+    margin-top: calc((100vw/1920)*5);
+}
+
+.inputSize{
+    height: calc((100vw / 1920)* 55);
+    width: calc((100vw / 1920)* 55);
+    text-align: center;
+}
+
+.inputNum{
+    padding: calc((100vw / 1920)* 5) calc((100vw / 1920)* 7);;
+    font-size: calc((100vw/1920)*16);
+    resize: none;
+}
+
+.actionBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: calc((100vw / 1920)* 14);
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        height: calc((100vw / 393)* 480);
+        width: calc((100vw / 393)* 300);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr;
+        padding: calc((100vw / 393)* 20);
+    }
+    .image{
+        height: auto;
+        width: 30%;
+    }
+
+    .details{
+        width: 100%;
+        gap: calc((100vw / 393)* 10);
+        padding: 0;
+    }
+
+    .heading{
+        font-size: calc((100vw/393)*16);
+    }
+
+    .form{
+        gap: calc((100vw / 393)* 10);
+        font-size: calc((100vw / 393)* 14);
+    }
+
+    .sizeContainer{
+        gap: calc((100vw / 393)* 10);
+        margin-top: calc((100vw/393)*5);
+    }
+
+    .inputSize{
+        height: calc((100vw / 393)* 40);
+        width: calc((100vw / 393)* 40);
+        font-size: calc((100vw/393)*12);
+    }
+
+    .inputNum{
+        font-size: calc((100vw/393)*10);
+        padding: calc((100vw / 393)* 5) calc((100vw / 393)* 7);
+    }
+
+    .actionBtn{
+        font-size: calc((100vw/393)*10);
+    }
+}
