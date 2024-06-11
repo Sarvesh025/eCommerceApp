@@ -10,7 +10,6 @@ export default function NavModal({ setOpen, isO }) {
         }>
             <div className={styles['navlinkcontainer']} style={isO ? {} : { display: 'none' }}>
                 <Link to='/' className={location.pathname === '/' ? styles.active : ''} onClick={() => {
-                    console.log('sapne vs everyone')
                     setOpen(!isO)
                 }}><h3>Home</h3></Link>
                 <Link to='/contact' className={location.pathname === '/contact' ? styles.active : ''} onClick={() => {

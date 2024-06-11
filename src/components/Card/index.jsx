@@ -8,7 +8,6 @@ export default function Card({img, desc, id}) {
 
   function handelClick(img, desc, id){
     setShow(!show);
-    console.log(desc);
   }
 
   return (

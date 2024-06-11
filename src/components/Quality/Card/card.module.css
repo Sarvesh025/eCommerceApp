@@ -10,6 +10,8 @@
     overflow: hidden;
     height: calc((100vw / 1920)* 180);
     font-size: calc((100vw/1920)*16);
+    transition: all 500ms ease-in-out;
+
 }
 
 .cardContainer{
