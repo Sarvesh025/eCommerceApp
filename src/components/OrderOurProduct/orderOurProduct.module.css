@@ -74,6 +74,7 @@
 .inputNum{
     padding: calc((100vw / 1920)* 5) calc((100vw / 1920)* 7);;
     font-size: calc((100vw/1920)*16);
+    outline: none;
     resize: none;
 }
 

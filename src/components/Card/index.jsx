@@ -2,7 +2,7 @@ import React ,{useState} from 'react'
 import styles from './card.module.css'
 import OrderOurProduct from '../OrderOurProduct/index.jsx';
 
-export default function Card({img, desc, click, id, close}) {
+export default function Card({img, desc, id}) {
 
   const [show, setShow] = useState(false);
 

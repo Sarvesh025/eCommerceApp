@@ -16,7 +16,6 @@ export default function index({title, data}) {
 
     if(Number(ref.current?.scrollWidth) > Number(ref.current?.clientWidth)){
         setNextBtn('flex');
-        //   next.current.style.display = 'flex'
     }
   }, [])
 
@@ -25,20 +24,16 @@ export default function index({title, data}) {
     
     if(ref.current?.scrollLeft.toFixed() > 20){
         setPrevBtn('flex')
-        // prev.current.style.display ='flex'
     }
     else{
         setPrevBtn('none')
-        //prev.current.style.display ='none'
     }
 
     if (ref.current?.scrollWidth <= Number(ref.current?.scrollLeft.toFixed()) + Number(ref.current?.clientWidth)){
         setNextBtn('none')
-        // next.current.style.display ='none'
       }
       else{
         setNextBtn('flex');
-        // next.current.style.display ='flex'
       }
   };
 
