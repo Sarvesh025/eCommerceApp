@@ -99,39 +99,39 @@ export default function index({ img, desc, id, setShow }) {
     const handelOrder = (e) => {
         e.preventDefault();
 
-        if (verify.email &&
-            verify.pincode && (
-                (form.small) ||
-                (form.medium) ||
-                (form.large) ||
-                (form.extraLarge))) {
-            if ((verify.small && form.small) || (verify.medium && form.medium) || (verify.large && form.large) || (verify.extraLarge && form.extraLarge)) {
-                alert(`
-            CUSTOMER'S DETAILS :-
-            Email : ${form.email}
-            Landmark : ${form.landmark}
-            Pincode : ${form.pincode}
-            Address : ${form.address}
-
-            ORDER'S DETAILS :-
-            Item : ${desc}
-            ${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}
-            `);
-                window.open(`https://wa.me/918420836758?text=${encodeURIComponent(`CUSTOMER'S DETAILS :-\nEmail : ${form.email}\nLandmark : ${form.landmark}\nPincode : ${form.pincode}\nAddress : ${form.address}\nORDER'S DETAILS :-\nItem : ${desc}\n${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}`)}`)
-
-            } else {
-                alert('Please select size!');
+        if((!verify.small && form.small.length) || (!verify.large && form.large.length) || (!verify.medium && form.medium.length) || (!verify.extraLarge && form.extraLarge.length)){
+            alert('Please enter a valid number of items to order');
+        }
+        else{
+            if(verify.small || verify.medium || verify.large || verify.extraLarge){
+                if(verify.email){
+                    if(verify.pincode){
+                        alert(`
+                        CUSTOMER'S DETAILS :-
+                        Email : ${form.email}
+                        Landmark : ${form.landmark}
+                        Pincode : ${form.pincode}
+                        Address : ${form.address}
+            
+                        ORDER'S DETAILS :-
+                        Item : ${desc}
+                        ${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}
+                        `);
+                            window.open(`https://wa.me/918420836758?text=${encodeURIComponent(`CUSTOMER'S DETAILS :-\nEmail : ${form.email}\nLandmark : ${form.landmark}\nPincode : ${form.pincode}\nAddress : ${form.address}\nORDER'S DETAILS :-\nItem : ${desc}\n${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}`)}`)            
+                    }
+                    else{
+                        alert('Please enter a valid pincode');
+                    }
+                }
+                else{
+                    alert('Please enter a valid email address');
+                }
             }
-        } else {
-            alert('Please fill all the detail correctly!');
+            else{
+                alert('Please fill the number of items of a perticular size');
+            }
         }
-    };
-
-    useEffect(() => {
-        if (postal_code_verification(form.pincode)) {
-            setForm({ ...form, })
-        }
-    }, [form.pincode]);
+     };
 
     return (
         <div className={styles.orderOurProduct}>
@@ -146,10 +146,10 @@ export default function index({ img, desc, id, setShow }) {
                         <div>
                             <label htmlFor="">Select your size with required pieces!</label>
                             <div className={styles.sizeContainer}>
-                                <input className={styles.inputSize} type="number" name='small' value={form.small} onChange={handelChange} placeholder='S' style={form.small ? verify.small ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
-                                <input className={styles.inputSize} type="number" name='medium' value={form.medium} onChange={handelChange} placeholder='M' style={form.medium ? verify.medium ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
-                                <input className={styles.inputSize} type="number" name='large' value={form.large} onChange={handelChange} placeholder='L' style={form.large ? verify.large ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
-                                <input className={styles.inputSize} type="number" name='extraLarge' value={form.extraLarge} onChange={handelChange} placeholder='XL' style={form.extraLarge ? verify.extraLarge ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
+                                <input className={styles.inputSize} type="number" name='small' value={form.small} onChange={handelChange} placeholder='S' min='1' max='100' style={form.small ? verify.small ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
+                                <input className={styles.inputSize} type="number" name='medium' value={form.medium} onChange={handelChange} placeholder='M' min='1' max='100' style={form.medium ? verify.medium ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
+                                <input className={styles.inputSize} type="number" name='large' value={form.large} onChange={handelChange} placeholder='L' min='1' max='100' style={form.large ? verify.large ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
+                                <input className={styles.inputSize} type="number" name='extraLarge' value={form.extraLarge} onChange={handelChange} placeholder='XL' min='1' max='100' style={form.extraLarge ? verify.extraLarge ? { outline: 'green solid' } : { outline: 'red solid' } : {}} />
                             </div>
                         </div>
                         <div className={styles.inputBoxes}>
