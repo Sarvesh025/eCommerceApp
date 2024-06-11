@@ -47,7 +47,6 @@ export default function Dropbox({title, getData}) {
       reader.onload = () => {
         setImagePreview(reader.result);
         setImageName(file.name)
-        // console.log(reader.result);
       };
       reader.readAsDataURL(file);
     } else {

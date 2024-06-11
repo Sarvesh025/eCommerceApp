@@ -5,6 +5,7 @@
     aspect-ratio: 16 / 9;
     margin: 50px 325px;
     position: relative;
+    transition: all 700ms ease-in-out;
 }
 
 .men{

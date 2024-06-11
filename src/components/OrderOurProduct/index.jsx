@@ -89,7 +89,6 @@ export default function index({ img, desc, id, setShow }) {
                 setVerify({ ...verify, extraLarge: false });
             }
         }
-        // console.log(form);
     }
 
     const handelClose = () => {

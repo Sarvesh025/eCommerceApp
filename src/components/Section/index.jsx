@@ -46,14 +46,10 @@ export default function index({title, data}) {
     ref.current?.scrollBy(Number(ref.current?.clientWidth), 0);
   }
 
-  // const navigate = useNavigate();
+
 
   function handelClick(e){
-    // const ans = e.target.id;
-    // localStorage.setItem('frontDesign', JSON.stringify(data[ans].img))
-    // localStorage.clear('backDesign');
-    // console.log(data[ans].img);
-    // window.open('/product', '_target')
+
   }
 
 return (   

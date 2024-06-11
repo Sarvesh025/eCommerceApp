@@ -279,7 +279,7 @@ const main = useRef();
   }
 
   const temp = useSelector((state)=>state.designs.value)
-  console.log(temp);
+
 
   return (
     <div style={product} ref ={main}>
