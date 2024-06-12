@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from './orderOurProduct.module.css'
 import { postal_code_verification, emailFormat, size } from '../../util'
 import { FcSelfServiceKiosk } from 'react-icons/fc';
+import emailjs from '@emailjs/browser'
 export default function index({ img, desc, id, setShow }) {
 
     const [form, setForm] = useState({
@@ -105,18 +106,28 @@ export default function index({ img, desc, id, setShow }) {
             if(verify.small || verify.medium || verify.large || verify.extraLarge){
                 if(verify.email){
                     if(verify.pincode){
-                        alert(`
-                        CUSTOMER'S DETAILS :-
-                        Email : ${form.email}
-                        Landmark : ${form.landmark}
-                        Pincode : ${form.pincode}
-                        Address : ${form.address}
-            
-                        ORDER'S DETAILS :-
-                        Item : ${desc}
-                        ${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}
-                        `);
-                            window.open(`https://wa.me/918420836758?text=${encodeURIComponent(`CUSTOMER'S DETAILS :-\nEmail : ${form.email}\nLandmark : ${form.landmark}\nPincode : ${form.pincode}\nAddress : ${form.address}\nORDER'S DETAILS :-\nItem : ${desc}\n${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}`)}`)            
+                        // alert(`
+                        // CUSTOMER'S DETAILS :-
+                        // Email : ${form.email}
+                        // Landmark : ${form.landmark}
+                        // Pincode : ${form.pincode}
+                        // Address : ${form.address}
+                        
+                        // ORDER'S DETAILS :-
+                        // Item : ${desc}
+                        // ${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}
+                        // `);
+                        //     window.open(`https://wa.me/918420836758?text=${encodeURIComponent(`CUSTOMER'S DETAILS :-\nEmail : ${form.email}\nLandmark : ${form.landmark}\nPincode : ${form.pincode}\nAddress : ${form.address}\n\nORDER'S DETAILS :-\nItem : ${desc}\n${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}`)}`)            
+                  
+                        try{
+                            emailjs.sendForm('service_ot234zj', 'template_pc0esy8', e.target, 'JcKFmMIAXfLnLokyT');
+                            alert('Your order has been placed successfully!');
+                            setShow(false);
+                        }
+                        catch(err){
+                            alert(err);
+                        }
+
                     }
                     else{
                         alert('Please enter a valid pincode');
@@ -141,6 +152,7 @@ export default function index({ img, desc, id, setShow }) {
                 <div className={styles.details}>
                     <h2 className={styles.heading}>Please Provide Your Details!</h2>
                     <form className={styles.form} onSubmit={handelOrder}>
+                        <input name='desc' value={desc} style={{display:'none'}}/>
 
                         <div>
                             <label htmlFor="">Select your size with required pieces!</label>
