@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: calc((100vw/1920)*315);
+    width: calc((100vw/1920)*230);
     aspect-ratio: 1/1;
     padding: 10px 20px;
     box-sizing: border-box;

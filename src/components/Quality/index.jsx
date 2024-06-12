@@ -5,6 +5,7 @@ import Card from './Card'
 export default function index() {
   return (
     <div className={styles.quality}>
+      <img src="/assets/funnyMore.jpg" alt="image..." className={styles.background}/>
         <Card img='/' heading = 'No Quantity Restriction' content='No set up fees and No Minimum Order Quantities – Not Just In Cheap Quality Digital / DTG Prints, In Teelabs no restriction on Screen Printing & Embroidery Tees, also can personalize t-shirt itself from single quantity, Any Styles, Any Size & Any Color'/>
         <Card img='/' heading = 'More Quality Option to Choose' content='In TeeLabs we have 10+ fabric Quality options to choose to fit your budget and requirements.for example in polos 240GSM in 4 different qualities, round neck 180GSM in 5 qualities. talk to our sales advisor to know more about t-shirt quality and how to choose one for you.'/>
         <Card img='/' heading = '50+ Fabric Shades or Custom Colors' content='We understand the importance of choice when it comes to customizing your t-shirts. That’s why we offer an extensive selection of over 50 fabric colors to suit every preference and occasion. Whether you’re looking for vibrant hues to make a statement or something subtle for a more understated look, teelabs is the place to be. We also custom dye fabrics to match your Brand color'/>

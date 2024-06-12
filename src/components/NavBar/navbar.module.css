@@ -4,7 +4,7 @@
     align-items: center;
     background-color: #3a3b3c;
     padding: calc((100vw/ 1920)*15) calc((100vw / 1920)* 20);
-    font-size: calc((100vw /1920)*16);
+    font-size: calc((100vw /1920)*18);
 }
 
 .info {
@@ -22,7 +22,7 @@
 }
 
 .logo {
-    height: calc((100vw/1920)*50);
+    height: calc((100vw/1920)*65);
 }
 .active {
     color: #646cff;
