@@ -10,7 +10,7 @@ import Notifications from './pages/Notifications'
 import Product from './pages/Product'
 import Navbarcontainer from './components/Navbarcontainer'
 import Navbar2 from './components/Navbar2'
-import About from './pages/About'
+import About from './pages/About/index'
 import Contact from './pages/Contact'
 import { useState } from 'react';
 import NavModal from './components/navModal/NavModal'

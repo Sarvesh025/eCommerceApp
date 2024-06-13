@@ -1,0 +1,29 @@
+.ourStory{
+    padding: 100px 100px;
+    text-align: center;
+    background: url('/assets/funnyMore.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.meetTheTeam{
+    background: red;
+    padding: calc((100vw / 1920)* 50) calc((100vw / 1920)* 20);
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: calc((100vw / 1920)* 50);
+    font-size: calc((100vw / 1920)* 20);
+}
+
+.members{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.ourBlog{
+    height: 500px;
+    background-color: pink;
+}

@@ -10,10 +10,22 @@
     transition: all 500ms ease-in-out;
 }
 
+.crousal{
+    display: none;
+}
+
 .card:hover{
     background-color: black;
     position: absolute;
     inset: 0;
+    >.crousal{
+        display: block;
+        height: 100%;
+        width: 100%;
+       }
+       >.intro{
+        display: none;
+       }
 }
 
 @media screen and (max-width: 768px){
