@@ -4,6 +4,7 @@ import Products from '../components/Products'
 import Process from '../components/Process'
 import Services from '../components/Services'
 import Quality from '../components/Quality'
+import Reviews from '../components/Reviews'
 import Whatsapp from '../components/Whatsapp'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <Process/>
     <Services/>
     <Quality/>
+    <Reviews/>
     <Whatsapp/>
     </div>
   )

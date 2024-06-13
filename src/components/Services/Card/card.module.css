@@ -13,6 +13,10 @@
 .crousal{
     display: none;
 }
+.crousalSlider {
+    width: 85%;
+    margin: auto;
+}
 
 .card:hover{
     background-color: black;
@@ -20,8 +24,6 @@
     inset: 0;
     >.crousal{
         display: block;
-        height: 100%;
-        width: 100%;
        }
        >.intro{
         display: none;

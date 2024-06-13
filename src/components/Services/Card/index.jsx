@@ -63,7 +63,7 @@ export default function card({ image, heading, content }) {
         <p className={styles.content}>{content}</p>
       </div>
       <div className={styles.crousal}>
-        <Carousel width='100%' showThumbs={false} centerMode={true}>
+        <Carousel className={styles.crousalSlider} showThumbs={false} centerMode={true} autoPlay={true} infiniteLoop={true}>
           {
             images.map((e)=>{
               return(
