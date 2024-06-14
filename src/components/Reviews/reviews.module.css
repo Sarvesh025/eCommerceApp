@@ -1,7 +1,7 @@
 .reviews{
     font-size: calc((100vw / 1920)*20);
     text-align: center;
-    padding: calc((100vw/ 1920)*20) 0;
+    padding-top: calc((100vw/ 1920)*20);
 }
 
 .crousal{
@@ -14,6 +14,6 @@
         padding: calc((100vw/ 393)*10) 0;
     }
     .crousal{
-        padding: calc((100vw/ 393)*35) 0;
+        padding-top: calc((100vw/ 393)*35);
     }
 }

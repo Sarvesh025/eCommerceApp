@@ -1,21 +1,18 @@
 .quality{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: calc((100vw/1920)*20);
     margin: 50px 0;
-    position: relative;
-}
-
-.background{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    opacity: 0.5;
-    z-index: -5;
+    background: url('/assets/funnyMore.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 @media screen and (max-width: 768px){
-    .background{
-        display: none;
+    .quality{
+        padding: calc((100vw/393)*15) 0;
+        gap: calc((100vw/393)*25);
     }
 }

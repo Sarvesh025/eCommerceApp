@@ -7,7 +7,7 @@ export default function index() {
         <div>
             <div className={styles.ourStory}>
                 <h1>Our Story</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eveniet obcaecati ullam exercitationem similique, ut neque voluptate cumque, ducimus dolore maiores optio quae! Quas, facilis nostrum! Aliquam, officia explicabo pariatur quaerat impedit quod voluptates!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos id alias tempore. Adipisci facere officia dignissimos autem omnis, quae amet doloremque voluptatem cupiditate. Blanditiis mollitia itaque, distinctio dignissimos quidem quae. Nobis et facere, quasi necessitatibus natus, eligendi tempore eveniet repellendus libero quidem, nam voluptatem aspernatur mollitia vitae eius itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eveniet obcaecati ullam exercitationem similique, ut neque voluptate cumque, ducimus dolore maiores optio quae! Quas, facilis nostrum! Aliquam, officia explicabo pariatur quaerat impedit quod voluptates!</p>
             </div>
             <div className={styles.meetTheTeam}>
                 <h1>Meet The Team</h1>

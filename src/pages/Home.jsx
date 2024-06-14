@@ -14,8 +14,8 @@ export default function Home() {
     <Products/>
     <Process/>
     <Services/>
-    <Quality/>
     <Reviews/>
+    <Quality/>
     <Whatsapp/>
     </div>
   )
