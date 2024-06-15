@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 
-export default function card({ image, heading, content }) {
+export default function card({ image, heading, content, scrollAnimation }) {
 
   const images = [{
     "id": "102",
@@ -56,7 +56,7 @@ export default function card({ image, heading, content }) {
   }];
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-aos={scrollAnimation}>
       <div className={styles.intro}>
         <img src={image} alt="image..." className={styles.img} />
         <h2 className={styles.heading}>{heading}</h2>

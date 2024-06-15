@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from 'react'
 import Section from "./Section/index";
+import Services from "./Services";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const container = {
   display: "flex",
@@ -8,6 +11,11 @@ const container = {
 };
 
 export default function Products() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    })
+  }, []);
   const recomended = [
     { img: "/assets/1.png", desc: "Image-1", id:'1'},
     { img: "/assets/2.png", desc: "Image-2", id:'2'},
@@ -27,9 +35,10 @@ export default function Products() {
 
   return (
     <div style={container}>
-      <Section title="Recomended" data={recomended}/>
-      <Section title="Best Sellers" data={recomended}/>
-      <Section title="Explore More" data={recomended}/>
+      {/* <Section title="Recomended" data={recomended}/> */}
+      <Section title="New Arival" data={recomended} scrollAnimation="fade-left"/>
+      <Services/>
+      <Section title="Explore More" data={recomended} scrollAnimation="fade-right"/>
     </div>
   );
 }

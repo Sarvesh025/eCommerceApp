@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './reviews.module.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-export default function index() {
+export default function index({scrollAnimation}) {
     const images = [{
         "id": "102",
         "author": "Ben Moore",
@@ -73,7 +73,7 @@ export default function index() {
     }      
     
   return (
-    <div className={styles.reviews}>
+    <div className={styles.reviews} data-aos={scrollAnimation}>
         <h1>Our Happy Customers</h1>
         <Carousel
         responsive={responsive}  

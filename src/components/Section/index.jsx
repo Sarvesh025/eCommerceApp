@@ -5,7 +5,7 @@ import { useRef } from 'react'
 import { useNavigate } from "react-router-dom";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 
-export default function index({title, data}) {
+export default function index({title, data, scrollAnimation}) {
     const [prevBtn, setPrevBtn] = useState('none');
     const [nextBtn, setNextBtn] = useState('none');
   const ref = useRef(null);
@@ -61,7 +61,7 @@ return (
         <span ref={next} className={styles.scrollButtons} style={{display:nextBtn}} onClick={handelNext}><CiCircleChevRight size={35}/></span>
       </div>
       </div>
-      <div style={{ display:'flex', alignItems:'center'}}>
+      <div style={{ display:'flex', alignItems:'center'}} data-aos={scrollAnimation}>
         <div ref={ref} className={styles.cards} onScroll={handelScroll}>
 
           {data.map((element, index)=>(

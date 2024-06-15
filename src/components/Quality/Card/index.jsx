@@ -2,9 +2,9 @@ import styles from './card.module.css';
 
 import React from 'react'
 
-export default function index({img, heading, content}) {
+export default function index({img, heading, content ,scrollAnimation}) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-aos={scrollAnimation}>
         <div className={styles.cardContainer}>
         <img className={styles.image} src={img} alt="image..." />
         <div className={styles.text}>
