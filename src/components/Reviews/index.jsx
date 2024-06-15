@@ -91,9 +91,9 @@ export default function index({scrollAnimation}) {
         className={styles.crousal}
         focusOnSelect={true}
         >
-            {images.map((e)=>{
+            {images.map((e, index)=>{
                 return(
-                    <img src={e.download_url} width={200} alt="image..." />
+                    <img key={index} src={e.download_url} width={200} alt="image..." />
                     )
                 })}          
         </Carousel>

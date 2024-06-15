@@ -65,10 +65,10 @@ export default function card({ image, heading, content, scrollAnimation }) {
       <div className={styles.crousal}>
         <Carousel className={styles.crousalSlider} showThumbs={false} centerMode={true} autoPlay={true} infiniteLoop={true}>
           {
-            images.map((e)=>{
+            images.map((e, index)=>{
               return(
-                <div>
-                  <img src={e.download_url} alt="image..." className={styles.img} />
+                <div key={index}>
+                  <img key={index} src={e.download_url} alt="image..." className={styles.img} />
                 </div>
               )
             })
