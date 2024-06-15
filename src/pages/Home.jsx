@@ -17,7 +17,7 @@ export default function Home() {
   },[]);
 
   return (
-    <div>
+    <div style={{overflowX:'hidden'}}>
     <Banner scrollAnimation="zoom-out"/>
     <Products/>
     <Process/>
