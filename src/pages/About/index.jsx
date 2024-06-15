@@ -16,10 +16,9 @@ export default function index() {
                     <TeamMember heading = "Co-Founder" img='' intro="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum neque repellat dolorum deserunt quod itaque officia minima, fuga consequatur quasi."/>
                 </div>
             </div>
-            <div className={styles.ourBlog}>
-                <h1>Our Blog</h1>
+     
                 <Blog/>
-            </div>
+    
         </div>
     )
 }
