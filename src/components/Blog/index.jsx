@@ -8,26 +8,16 @@ const cardlist = [{
   title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Nullam euismod, nunc vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Sed euismod, nisi vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Nullam euismod, nunc vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi.`,
   thumbnail: "https://mspoweruser.com/wp-content/uploads/2023/11/t-shirt-design-software-for-PCs.jpg",
-  imgPos: "1/1",
-  detailPos: "1/2",
-  btnPos: 'end'
 },
 {
   title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Nullam euismod, nunc vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Sed euismod, nisi vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Nullam euismod, nunc vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi.`,
   thumbnail: "https://mspoweruser.com/wp-content/uploads/2023/11/t-shirt-design-software-for-PCs.jpg",
-  imgPos: "1/2",
-  detailPos: "1/1",
-  btnPos: 'start'
-
 },
 {
   title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Nullam euismod, nunc vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Sed euismod, nisi vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi. Nullam euismod, nunc vel aliquam bibendum, nunc nisl tincidunt tellus, ac commodo nisi ante quis nisi.`,
   thumbnail: "https://mspoweruser.com/wp-content/uploads/2023/11/t-shirt-design-software-for-PCs.jpg",
-  imgPos: "1/1",
-  detailPos: "1/2",
-  btnPos: 'end'
 }
 ]
 
@@ -56,17 +46,17 @@ export default function index() {
       {/* <MouseParallax/>
         <MouseParallax/> */}
 
-      <h1 style={{ textAlign: 'center' }}>Our Blog</h1>
+      <h1>Our Blog</h1>
       {cardlist.map((item, index) => {
         return (
-          <div key={index}>
+          <>
             <Card
               key={index}
               title={item.title}
               description={item.description}
               thumbnail={item.thumbnail}
             />
-          </div>
+          </>
         )
       })}
 

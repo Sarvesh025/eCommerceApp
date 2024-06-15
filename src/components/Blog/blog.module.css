@@ -1,87 +1,17 @@
-.blog {
-    height: 100px;
-    width: 100px;
-    font-family: 'Robot';
-}
-
 .ourBlog {
-    width: 100vw;
     background-color: rgb(0, 0, 0, 0.9);
     backdrop-filter: blur(100px);
     display: grid;
-    gap: 40px;
+    gap: calc((100vw/1920)*30);
+    font-size: calc((100vw/1920)*30);
     justify-items: center;
     align-items: center;
-
-}
-
-.blogCard {
-    border: solid 1px white;
-    border-radius: calc((100vw / 1920)* 10);
-    width: 70vw;
-    margin: auto;
-    padding: calc((100vw / 1920)* 20);
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-
-
-}
-
-.blogDetails {
-    display: grid;
-    
-
-}
-
-.blogTitle {
-    color: white;
-    font-size: calc((100vw / 1920)* 25);
-
-}
-
-.blogDesc {
-    color: white;
-    font-size: calc((100vw / 1920)* 20);
-}
-
-.blogCardImg {
-    height: auto;
-    width: 100%;
-    border-radius: 10px;
-    
-}
-
-.blogButton {
-    color: rgb(0, 0, 0);
-    font-size: calc((100vw / 1920)* 20);
-    padding: calc((100vw / 1920)* 10);
-    padding-right: calc((100vw / 1920)* 25);
-    padding-left: calc((100vw / 1920)* 25);
-    border-radius: calc((100vw / 1920)* 10);
-    cursor: pointer;
-    justify-self: end;
-    align-self: end;
-    transition: all 400ms ease-in-out;
-    background-color: rgb(255, 255, 255, 0.7);
-    backdrop-filter: blur(30px);
-
-}
-
-.blogButton:hover {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    text-align: center;
 }
 
 @media (max-width: 1100px) {
-    .blogCard {}
-
-    .blogTitle {
-        color: white;
-        font-size: calc((100vw / 1920)* 25);
-
-    }
-
-
+   .ourBlog{
+    font-size: calc((100vw/393)*15);
+    gap: calc((100vw/393)*20);
+   }
 }

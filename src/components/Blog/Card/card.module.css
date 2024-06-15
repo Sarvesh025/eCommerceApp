@@ -6,26 +6,40 @@
     padding: calc((100vw / 1920)* 20);
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 30px;
+    gap: calc((100vw / 1920)* 20);
     align-items: center;
-   
+}
 
+.blogCard:nth-child(odd) {
+    grid-template-columns: 1.5fr 1fr;
+
+    >.blogCardImg {
+        grid-area: 1/1;
+    }
+}
+
+.blogCard:nth-child(even) {
+    grid-template-columns: 1fr 1.5fr;
+
+    >.blogCardImg {
+        grid-area: 1/2;
+    }
 }
 
 .blogDetails {
     display: grid;
     align-items: center;
-    gap:calc((100vw/1920)*20)
+    gap: calc((100vw/1920)*20);
+    text-align:start;
 }
 
-.blogDetailPos{
+.blogDetailPos {
     grid-area: 1/1;
 }
+
 .blogTitle {
     color: white;
     font-size: calc((100vw / 1920)* 25);
-
 }
 
 .blogDesc {
@@ -36,22 +50,18 @@
 .blogCardImg {
     height: auto;
     width: 100%;
-    border-radius: 10px;
-    
+    border-radius: calc((100vw/1920)*10);    
 }
 
 .blogButton {
     color: rgb(0, 0, 0);
     font-size: calc((100vw / 1920)* 20);
-    padding: calc((100vw / 1920)* 10);
-    padding-right: calc((100vw / 1920)* 25);
-    padding-left: calc((100vw / 1920)* 25);
+    padding: calc((100vw / 1920)* 10) calc((100vw / 1920)* 25);
     border-radius: calc((100vw / 1920)* 10);
     cursor: pointer;
     transition: all 400ms ease-in-out;
     background-color: rgb(255, 255, 255, 0.7);
     backdrop-filter: blur(30px);
-
 }
 
 .blogButton:hover {
@@ -61,22 +71,39 @@
 
 @media (max-width: 1100px) {
     .blogCard {
-        grid-template-columns: auto;
+        border-radius: calc((100vw / 393)* 15);
+        padding: calc((100vw / 393)* 15);
+        gap: calc((100vw / 393)* 15);
         grid-template-rows: auto auto;
     }
-    .blogCardImg{
-        grid-area: '1/1';
+
+    .blogCard:nth-child(odd),
+    .blogCard:nth-child(even) {
+        grid-template-columns: auto;
+
+        >.blogCardImg {
+            grid-area: 1/1;
+            border-radius: calc((100vw / 393)* 15) calc((100vw / 393)* 15) 0 0;
+        }
     }
-    .blogDetails{
-        grid-area: '2/1';
+
+    .blogDetails {
+        grid-area: 2/1;
+        gap: calc((100vw / 393)* 10);
+    }
+
+    .blogButton {
+        justify-self: start;
+        font-size: calc((100vw / 393)* 12);
+        padding: calc((100vw / 393)* 7) calc((100vw / 393)* 10);
+        border-radius: calc((100vw / 393)* 15);
     }
 
     .blogTitle {
-        color: white;
-        font-size: calc((100vw / 1920)* 25);
-
-
+        font-size: calc((100vw / 393)* 16);
     }
 
-
+    .blogDesc {
+        font-size: calc((100vw / 393)* 12);
+    }
 }
