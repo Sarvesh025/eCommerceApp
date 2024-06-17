@@ -65,7 +65,7 @@ return (
         <div ref={ref} className={styles.cards} onScroll={handelScroll}>
 
           {data.map((element, index)=>(
-            <Card key={index} id={index} img={element.img} desc={element.desc} click={handelClick}/>
+            <Card key={index} id={element.id} img={element.img} desc={element.desc} click={handelClick}/>
           ))}
 
         </div>

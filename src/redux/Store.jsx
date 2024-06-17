@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import designReducer from './designs/designLists'
+import order from './designs/orderSlice'
 
-export const store = configureStore({
+const store = configureStore({
     reducer: {
-        designs: designReducer,
+        order: order,
       },
 })
+
+export default store;

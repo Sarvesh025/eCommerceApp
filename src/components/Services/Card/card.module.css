@@ -21,6 +21,7 @@
 .card:hover{
     background-color: black;
     position: absolute;
+    z-index: 10;
     inset: 0;
     >.crousal{
         display: block;

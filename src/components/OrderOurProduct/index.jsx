@@ -3,7 +3,9 @@ import styles from './orderOurProduct.module.css'
 import { postal_code_verification, emailFormat, size } from '../../util'
 import { FcSelfServiceKiosk } from 'react-icons/fc';
 import emailjs from '@emailjs/browser'
-export default function index({ img, desc, id, setShow }) {
+import { useDispatch } from 'react-redux';
+import { cancelOrder } from '../../redux/designs/orderSlice';
+export default function index({ img, desc, id }) {
 
     const [form, setForm] = useState({
         email: '',
@@ -91,9 +93,14 @@ export default function index({ img, desc, id, setShow }) {
             }
         }
     }
+    const dispatch = useDispatch();
 
     const handelClose = () => {
-        setShow(false);
+        dispatch(cancelOrder({
+            img : '',
+            desc : '',
+            id : ''
+          }));
     };
 
     const handelOrder = (e) => {
@@ -122,7 +129,7 @@ export default function index({ img, desc, id, setShow }) {
                         try{
                             emailjs.sendForm('service_ot234zj', 'template_pc0esy8', e.target, 'JcKFmMIAXfLnLokyT');
                             alert('Your order has been placed successfully!');
-                            setShow(false);
+                            handelClose();
                         }
                         catch(err){
                             alert(err);
