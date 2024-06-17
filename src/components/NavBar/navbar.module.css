@@ -27,6 +27,7 @@
 
 .logo {
     height: calc((100vw/1920)*65);
+    mix-blend-mode: color-burn;
 }
 .active {
     color: #646cff;

@@ -13,7 +13,7 @@ export default function NavBar({ isOpen, setOpen }) {
   return (
     <div className={styles.navbar}>
       <div className={styles.info}>
-        <img className={styles.logo} src="/assets/wishStorelogo.png" alt="logo" />
+        <img className={styles.logo} src="/assets/browserLogo.png" alt="logo" />
         {/* <div>
         <button>Login</button>
     </div> */}
