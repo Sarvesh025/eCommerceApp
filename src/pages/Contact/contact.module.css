@@ -1,0 +1,50 @@
+.top {
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 30px 0;
+    background: #2f2f2f;
+  }
+  
+  .center {
+    display: flex;
+    gap: 2rem;
+    width: 80%;
+    margin: 100px auto;
+  }
+  
+  .centerElements {
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 40vh;
+  }
+  
+  .view {
+    display: flex;
+    flex-direction : column;
+    gap: 0.5rem;
+    width: inherit;
+  }
+  
+  .viewElements {
+    border: 1px solid;
+    padding: 10px;
+  }
+  
+  .bottom {
+    position: relative;
+    background: #2f2f2f;
+    padding: 25px;
+  }
+  
+  .heading {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    color: #6c63ff;
+  }

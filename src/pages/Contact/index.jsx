@@ -1,55 +1,6 @@
 import React, { useState } from "react";
-
-const top = {
-  height: "40vh",
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  position: "relative",
-  margin:'30px 0',
-  background:'#2f2f2f'
-};
-
-const center = {
-  display: "flex",
-  gap:'2rem',
-  width:'80%',
-  margin:'100px auto'
-};
-
-const centerElements = {
-  minWidth: '30%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-  gap: '1rem',
-  height: '40vh'
-}
-
-const view = {
-  display:'flex',
-  flexDirection :'column',
-  gap:'0.5rem',
-  width:'inherit'
-}
-
-const viewElements = {
-  border:'1px solid',
-  padding:'10px'
-}
-
-const bottom = {
-  position:'relative',
-  background:'#2f2f2f',
-  padding:'25px'
-};
-
-const heading = {
-  position: "absolute",
-  top: "0px",
-  left: "10px",
- color:'#6c63ff'
-};
+import styles from './contact.module.css'
+import LazyLoader from "../../components/LazyLoader";
 
 export default function Contact() {
   const [selectedQuery, setSelectedQuery] = useState("order");
@@ -59,9 +10,9 @@ export default function Contact() {
   }
   return (
     <div style={{ width: "80%", margin: "0 auto" }}>
-      <div style={top}>
+      <div className={styles.top}>
       
-          <h2 style={heading}>Contact us!</h2>
+          <h2 className={styles.heading}>Contact us!</h2>
         
         <div>
           <h2>Search Your Query, here</h2>
@@ -82,8 +33,8 @@ export default function Contact() {
           alt="img..."
         />
       </div>
-      <div style={center}>
-        <div style={centerElements}>
+      <div className={styles.center}>
+        <div className={styles.centerElements}>
           <h4 onClick={() => handelQuery("order")} style={selectedQuery === 'order' ? {color:'#6c63ff'} : {color:'white'}}>ORDERS, DELIVERY & PAYMENTS</h4>
           <h4 onClick={() => handelQuery("cancel")} style={selectedQuery === 'cancel' ? {color:'#6c63ff'} : {color:'white'}}>CANCELLATONS</h4>
           <h4 onClick={() => handelQuery("refund")} style={selectedQuery === 'refund' ? {color:'#6c63ff'} : {color:'white'}}>REFUNDS & RETURNS</h4>
@@ -94,10 +45,10 @@ export default function Contact() {
 
         <div style={{height:'inherit', width:'1px', background:'white'}}></div>
 
-        <div style={view}>
+        <div className={styles.view}>
           {selectedQuery === "order" && (
             <>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
               <summary>How do i Check the status of my order ? </summary>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -105,7 +56,7 @@ export default function Contact() {
                 molestiae dolores beatae?
               </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
               <summary>Orders</summary>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -113,7 +64,7 @@ export default function Contact() {
                 molestiae dolores beatae?
               </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
               <summary>Delivery</summary>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -121,7 +72,7 @@ export default function Contact() {
                 molestiae dolores beatae?
               </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
               <summary>Payments</summary>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -134,7 +85,7 @@ export default function Contact() {
 
           {selectedQuery === "cancel" && (
             <>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Can I cancel my order ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -142,7 +93,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>How do i cancel my order, which is already in proceess ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -150,7 +101,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Can I cancel my Cancellation Request ?</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -158,7 +109,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Cancellaiton Policy</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -170,7 +121,7 @@ export default function Contact() {
               )}
           {selectedQuery === "refund" && (
             <>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>How do i Return my Product ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -178,7 +129,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>How will I get my refund ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -186,7 +137,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Which products are not eligible for return ?</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -194,7 +145,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>I wish Change my Product</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -202,7 +153,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Return & Refund Policy</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -210,7 +161,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Returns</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -218,7 +169,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Refunds</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -229,7 +180,7 @@ export default function Contact() {
             </>                  )}
           {selectedQuery === "account" && (
             <>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>I have forgoten my Password. </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -237,7 +188,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>I would like to unsubscribe Trendsta Promotional SMS and emails.</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -245,7 +196,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>I want to delete my Trendsta Account.</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -253,7 +204,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>I want to change my phone number.</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -264,7 +215,7 @@ export default function Contact() {
             </>                  )}
           {selectedQuery === "offer" && (
             <>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>What are combo offers ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -272,7 +223,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Can I avail the combo offer on all the products ?</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -280,7 +231,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Can I buy other products along with the combo offers ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -288,7 +239,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Can I avail multiple combo offers together ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -296,7 +247,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Is the combo-offer still available if I cancel one product from the combo-offer ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -304,7 +255,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Does cancelling one product from one combo-offer affect my other orders ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -312,7 +263,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Do I have to apply a seperate coupon to avail these combo-offers ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -320,7 +271,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Can I apply another coupon on the combo-offers ?</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -331,7 +282,7 @@ export default function Contact() {
             </>                  )}
           {selectedQuery === "gift" && (
             <>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Can I apply another coupon on the combo-offers ? </summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -339,7 +290,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Orders</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -347,7 +298,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Delivery</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -355,7 +306,7 @@ export default function Contact() {
                 molestiae dolores beatae?
             </p>
             </details>
-            <details style={viewElements}>
+            <details className={styles.viewElements}>
             <summary>Payments</summary>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
@@ -367,8 +318,8 @@ export default function Contact() {
             )}
         </div>
       </div>
-      <div style={bottom}>
-        <h3 style={heading}>Corporate Details!</h3>
+      <div className={styles.bottom}>
+        <h3 className={styles.heading}>Corporate Details!</h3>
         <div>
             <p>Trendsta Brands Pvt. Ltd <br />
                 Hatiyara, subashpally <br />
