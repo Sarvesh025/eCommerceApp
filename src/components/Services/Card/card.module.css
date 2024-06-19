@@ -8,10 +8,39 @@
     cursor: pointer;
     padding: 30px;
     transition: all 500ms ease-in-out;
+    position: relative;
+}
+
+.background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    opacity: 0.1;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: calc((100vw/1920)*20);
+}
+
+.intro h2{
+    font-size: calc((100vw/1920)*40);
+}
+
+.intro p{
+    font-size: calc((100vw/1920)*20);
 }
 
 .crousal{
     display: none;
+    max-width: 41%;
 }
 .crousalSlider {
     width: 85%;

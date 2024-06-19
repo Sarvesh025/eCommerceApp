@@ -1,6 +1,7 @@
 .card {
     height: calc((100vw/1920)*400);
     min-width: calc((100vw/1920)*300);
+    max-width: calc((100vw/1920)*300);
     background: #999b9d;
     box-shadow: 0px 0px 2px 0px black;
     display: flex;
@@ -28,6 +29,7 @@
     .card{
         height: calc((100vw / 393)* 180);
         min-width: calc((100vw / 393)* 130);
+        max-width: calc((100vw / 393)* 130);
         font-size: calc((100vw/393)*12);
     }
     
