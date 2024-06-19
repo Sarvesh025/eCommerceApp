@@ -6,9 +6,10 @@
     box-shadow: 0px 0px 10px 0px #747bff;
     text-align: center;
     cursor: pointer;
-    padding: 30px;
+    padding: calc((100vw/1920)*30);
     transition: all 500ms ease-in-out;
     position: relative;
+    height: auto;
 }
 
 .background{
@@ -40,10 +41,13 @@
 
 .crousal{
     display: none;
-    max-width: 41%;
+    /* max-width: 41%; */
+    position: absolute;
+    inset: 0;
+    z-index: 200;
 }
 .crousalSlider {
-    width: 85%;
+    /* width: 85%; */
     margin: auto;
 }
 
@@ -53,15 +57,30 @@
     z-index: 10;
     inset: 0;
     >.crousal{
-        display: block;
+        display: flex;
        }
        >.intro{
         display: none;
        }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1100px){
    .card:hover{
-    position:static;
-   } 
+    position: relative;
+   }
+   .card{
+    flex-direction: row;
+    height: calc((100vh/393)*150);
+    padding: calc((100vw/393)*15);
+   }
+   .intro{
+    gap: calc((100vw/393)*10);
+   }
+   .intro h2{
+   font-size: calc((100vw/393)*12);
+   }
+   .intro p{
+   font-size: calc((100vw/393)*10);
+   }
+
 }
