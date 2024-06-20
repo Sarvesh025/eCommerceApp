@@ -1,6 +1,57 @@
 import React, { useState } from "react";
-import styles from './contact.module.css'
-import LazyLoader from "../../components/LazyLoader";
+import styles from "./contact.module.css";
+import FAQAccordian from '../../components/FAQAccordian/index';
+
+const top = {
+  height: "40vh",
+  display: "flex",
+  justifyContent: "space-around",
+  alignItems: "center",
+  position: "relative",
+  margin:'30px 0',
+  background:'#2f2f2f'
+};
+
+const center = {
+  display: "flex",
+  gap:'2rem',
+  width:'80%',
+  margin:'100px auto'
+};
+
+const centerElements = {
+  minWidth: '30%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  gap: '1rem',
+  height: '40vh'
+}
+
+const view = {
+  display:'flex',
+  flexDirection :'column',
+  gap:'0.5rem',
+  width:'inherit'
+}
+
+const viewElements = {
+  border:'1px solid',
+  padding:'10px'
+}
+
+const bottom = {
+  position:'relative',
+  background:'#2f2f2f',
+  padding:'25px'
+};
+
+const heading = {
+  position: "absolute",
+  top: "0px",
+  left: "10px",
+ color:'#6c63ff'
+};
 
 export default function Contact() {
   const [selectedQuery, setSelectedQuery] = useState("order");
@@ -10,7 +61,8 @@ export default function Contact() {
   }
   return (
     <div style={{ width: "80%", margin: "0 auto" }}>
-      <div className={styles.top}>
+      
+      <div style={top}>
       
           <h2 className={styles.heading}>Contact us!</h2>
         
@@ -329,7 +381,9 @@ export default function Contact() {
              </p>
              <p>You can reach us at <b>care@trendsta.com</b> with all queries. *We do not have any customer care number (TBH Insufficient Balance) .</p>
         </div>
+        
       </div>
+            <FAQAccordian />
     </div>
   );
 }
