@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     aspect-ratio: 16 / 9;
-    margin: calc((100vh/1920)*50) calc((100vh/1920)*300);
+    margin: 0 calc((100vw/1920)*350);
     position: relative;
     transition: all 700ms ease-in-out;
 }
