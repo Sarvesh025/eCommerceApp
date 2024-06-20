@@ -29,3 +29,7 @@ export function size(size) {
         return false;
     }
 }
+
+export const isMobile = () => {
+    return typeof window !== 'undefined' && window.matchMedia("(max-width: 1100px)").matches;
+}
