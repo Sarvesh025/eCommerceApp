@@ -9,7 +9,7 @@ export async function postal_code_verification(postal_code) {
     catch (Error) {
         return false;
     }
-}
+};
 
 export function emailFormat(email) {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -21,6 +21,17 @@ export function emailFormat(email) {
     }
 };
 
+export function validatePhoneNumber (number) {
+    // This regex matches common phone number formats (adjust as needed)
+    const phoneRegex = /^[+]*[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/;
+    if(phoneRegex.test(number)) {
+        return true;
+    }
+    else{
+        return false;
+    }
+};
+
 export function size(size) {
     if (size > 0) {
         return true;
@@ -28,4 +39,4 @@ export function size(size) {
     else {
         return false;
     }
-}
+};
