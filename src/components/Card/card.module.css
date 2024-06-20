@@ -27,9 +27,9 @@
 
 @media screen and (max-width: 1100px){
     .card{
-        height: calc((100vw / 393)* 180);
-        min-width: calc((100vw / 393)* 130);
-        max-width: calc((100vw / 393)* 130);
+        height: calc((100vw / 393)* 300);
+        min-width: calc((100vw / 393)* 180);
+        max-width: calc((100vw / 393)* 180);
         font-size: calc((100vw/393)*12);
     }
     

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Banner from '../components/Banner'
+import Banner from '../components/Banner/index'
 const Products = React.lazy(() => import('../components/Products'));
 const Process = React.lazy(() => import('../components/Process'));
 const Quality = React.lazy(() => import('../components/Quality'));
