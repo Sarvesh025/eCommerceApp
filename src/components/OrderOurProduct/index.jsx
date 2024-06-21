@@ -8,6 +8,7 @@ import { cancelOrder } from '../../redux/designs/orderSlice';
 export default function index({ img, desc, id, price }) {
 
     const [form, setForm] = useState({
+        name: '',
         email: '',
         phone: '',
         pincode: '',
@@ -29,7 +30,10 @@ export default function index({ img, desc, id, price }) {
     });
 
     function handelChange(e) {
-        if (e.target.name === 'email') {
+        if (e.target.name === 'name') {
+            setForm({...form, [e.target.name]: e.target.value });
+        }
+        else if (e.target.name === 'email') {
             setForm({ ...form, [e.target.name]: e.target.value });
             if (emailFormat(e.target.value)) {
                 setVerify({ ...verify, email: true })
@@ -53,11 +57,7 @@ export default function index({ img, desc, id, price }) {
                 }
                 else {
                     setVerify({ ...verify, pincode: false });
-                }
-            }
-
-            )
-
+                }})
         }
         else if (e.target.name === 'address') {
             setForm({ ...form, [e.target.name]: e.target.value });
@@ -128,7 +128,6 @@ export default function index({ img, desc, id, price }) {
                         catch(err){
                             alert(err);
                         }
-
                     }
                     else{
                         alert('Please enter a valid pincode');
@@ -165,7 +164,11 @@ export default function index({ img, desc, id, price }) {
                             </div>
                         </div>
                         <div className={styles.inputBoxes}>
-                            <label htmlFor="phone">Email :</label>
+                            <label htmlFor="name">Name :</label>
+                            <input type="text" name='name' value={form.name} onChange={handelChange} className={styles.inputNum} placeholder='Enter your name' required />
+                        </div>
+                        <div className={styles.inputBoxes}>
+                            <label htmlFor="email">Email :</label>
                             <input type="email" name='email' value={form.email} onChange={handelChange} className={styles.inputNum} placeholder='Enter your email id' style={form.email ? verify.email ? { outline: 'green solid' } : { outline: 'red solid' } : {}} required />
                         </div>
                         <div className={styles.inputBoxes}>
