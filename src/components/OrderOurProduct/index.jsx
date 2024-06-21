@@ -9,7 +9,7 @@ export default function index({ img, desc, id }) {
 
     const [form, setForm] = useState({
         email: '',
-        landmark: '',
+        phone: '',
         pincode: '',
         address: '',
         small: '',
@@ -36,7 +36,7 @@ export default function index({ img, desc, id }) {
                 setVerify({ ...verify, email: false })
             }
         }
-        else if (e.target.name === 'landmark') {
+        else if (e.target.name === 'phone') {
             setForm({ ...form, [e.target.name]: e.target.value });
         }
         else if (e.target.name === 'pincode') {
@@ -116,7 +116,7 @@ export default function index({ img, desc, id }) {
                         // alert(`
                         // CUSTOMER'S DETAILS :-
                         // Email : ${form.email}
-                        // Landmark : ${form.landmark}
+                        // phone : ${form.phone}
                         // Pincode : ${form.pincode}
                         // Address : ${form.address}
                         
@@ -124,7 +124,7 @@ export default function index({ img, desc, id }) {
                         // Item : ${desc}
                         // ${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}
                         // `);
-                        //     window.open(`https://wa.me/918420836758?text=${encodeURIComponent(`CUSTOMER'S DETAILS :-\nEmail : ${form.email}\nLandmark : ${form.landmark}\nPincode : ${form.pincode}\nAddress : ${form.address}\n\nORDER'S DETAILS :-\nItem : ${desc}\n${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}`)}`)            
+                        //     window.open(`https://wa.me/918420836758?text=${encodeURIComponent(`CUSTOMER'S DETAILS :-\nEmail : ${form.email}\nphone : ${form.phone}\nPincode : ${form.pincode}\nAddress : ${form.address}\n\nORDER'S DETAILS :-\nItem : ${desc}\n${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}`)}`)            
                   
                         try{
                             emailjs.sendForm('service_ot234zj', 'template_pc0esy8', e.target, 'JcKFmMIAXfLnLokyT');
@@ -175,8 +175,8 @@ export default function index({ img, desc, id }) {
                             <input type="email" name='email' value={form.email} onChange={handelChange} className={styles.inputNum} placeholder='Enter your email id' style={form.email ? verify.email ? { outline: 'green solid' } : { outline: 'red solid' } : {}} required />
                         </div>
                         <div className={styles.inputBoxes}>
-                            <label htmlFor="landmark">Landmark :</label>
-                            <input type="text" name='landmark' value={form.landmark} onChange={handelChange} className={styles.inputNum} placeholder='Enter Landmark' required />
+                            <label htmlFor="phone">phone :</label>
+                            <input type="number" name='phone' value={form.phone} onChange={handelChange} className={styles.inputNum} placeholder='Enter your phone No.' required />
                         </div>
                         <div className={styles.inputBoxes}>
                             <label htmlFor="pincode">Pincode :</label>
