@@ -23,7 +23,7 @@ export function emailFormat(email) {
 
 export function validatePhoneNumber (number) {
     // This regex matches common phone number formats (adjust as needed)
-    const phoneRegex = /^[+]*[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/;
+    const phoneRegex = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/;
     if(phoneRegex.test(number)) {
         return true;
     }

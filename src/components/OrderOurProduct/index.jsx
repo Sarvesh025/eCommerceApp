@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './orderOurProduct.module.css'
-import { postal_code_verification, emailFormat, size } from '../../util'
+import { postal_code_verification, emailFormat, validatePhoneNumber, size } from '../../util'
 import { FcSelfServiceKiosk } from 'react-icons/fc';
 import emailjs from '@emailjs/browser'
 import { useDispatch } from 'react-redux';
@@ -20,6 +20,7 @@ export default function index({ img, desc, id }) {
 
     const [verify, setVerify] = useState({
         email: false,
+        phone: false,
         pincode: false,
         small: false,
         medium: false,
@@ -38,6 +39,11 @@ export default function index({ img, desc, id }) {
         }
         else if (e.target.name === 'phone') {
             setForm({ ...form, [e.target.name]: e.target.value });
+            if (validatePhoneNumber(e.target.value)) {
+                setVerify({ ...verify, phone: true })
+            } else {
+                setVerify({ ...verify, phone: false })
+            }
         }
         else if (e.target.name === 'pincode') {
             setForm({ ...form, [e.target.name]: e.target.value });
@@ -175,8 +181,8 @@ export default function index({ img, desc, id }) {
                             <input type="email" name='email' value={form.email} onChange={handelChange} className={styles.inputNum} placeholder='Enter your email id' style={form.email ? verify.email ? { outline: 'green solid' } : { outline: 'red solid' } : {}} required />
                         </div>
                         <div className={styles.inputBoxes}>
-                            <label htmlFor="phone">phone :</label>
-                            <input type="number" name='phone' value={form.phone} onChange={handelChange} className={styles.inputNum} placeholder='Enter your phone No.' required />
+                            <label htmlFor="phone">Phone :</label>
+                            <input type="number" name='phone' value={form.phone} onChange={handelChange} className={styles.inputNum} placeholder='Enter your phone No.' style={form.phone ? verify.phone ? { outline: 'green solid' } : { outline: 'red solid' } : {}} required />
                         </div>
                         <div className={styles.inputBoxes}>
                             <label htmlFor="pincode">Pincode :</label>
