@@ -42,7 +42,7 @@ function App() {
         <Navbarcontainer isOpen={isOpen} setOpen={setOpen} />
         {/* <RouteRender/> */}
       
-        <div style={isOpen? { height:'0vh', overflow:'hidden'} :{ minHeight: '83vh', display: 'flex', flexDirection: 'column' }}>
+        <div style={isOpen? { height:'0vh', overflow:'hidden'} :{ display: 'flex', flexDirection: 'column' }}>
             <Suspense fallback={<h1>Loading...</h1>}>
           <Routes>
             <Route path='/' element={<Home />} />

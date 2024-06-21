@@ -2,12 +2,12 @@
   background-color: #363636;
   color: #dadada;
   cursor: pointer;
-  padding: 18px;
+  padding: calc((100vw/1920)*15);
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 18px;
+  font-size: calc((100vw/1920)*18);
   transition: 0.4s;
   box-sizing: border-box;
   display: flex;
@@ -17,7 +17,8 @@
 }
 
 .panel {
-  padding: 20px;
+  padding: calc((100vw/1920)*20);
+  font-size: calc((100vw/1920)*20);
   display: none;
   background-color: rgb(26, 25, 25);
   overflow: hidden;
@@ -32,5 +33,15 @@
   color: black;
   background-color: #f2c94a;
   box-shadow: 0px 2px 15px rgb(134 115 1);
+}
 
+@media screen and (max-width: 1100px) {
+   .accordion {
+        font-size: calc((100vw/393)*10);
+        padding: calc((100vw/393)*10);
+    }
+   .panel {
+        font-size: calc((100vw/393)*12);
+        padding: calc((100vw/393)*10);
+    }
 }

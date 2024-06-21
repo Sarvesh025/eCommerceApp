@@ -145,33 +145,19 @@ export default function Contact() {
 
 
   return (
-    <div style={{ width: "80%", margin: "0 auto" }}>
+    <div>
+      <div className={styles.top}>
+          <div className={styles.query}>
+            <input type="email" placeholder="Enter your email/phone"/>
+            <textarea name="query" id="" cols="30" rows="10" placeholder="Type Your Query Here..."></textarea>
+          </div>
+          <div className={styles.queryImg}>
+            <img src="/assets/contactImg.svg" alt="contact image" />
+          </div>
+      </div> 
 
-      <div style={top}>
-
-        <h2 className={styles.heading}>Contact us!</h2>
-
-        <div>
-          <h2>Search Your Query, here</h2>
-          <input
-            style={{
-              fontSize: "xx-large",
-              padding: "10px",
-              borderRadius: "31px",
-              borderStyle: "unset",
-            }}
-            type="text"
-            placeholder="search here..."
-          />
-        </div>
-        <img
-          style={{ height: "85%" }}
-          src="/assets/contactImg.svg"
-          alt="img..."
-        />
-      </div>
-      {!isMobile()?<>
         <div className={styles.center}>
+      {!isMobile()?<>
           <div className={styles.centerElements}>
             <h4 onClick={() => handelQuery("order")} style={selectedQuery === 'order' ? { color: '#6c63ff' } : { color: 'white' }}>ORDERS, DELIVERY & PAYMENTS</h4>
             <h4 onClick={() => handelQuery("cancel")} style={selectedQuery === 'cancel' ? { color: '#6c63ff' } : { color: 'white' }}>CANCELLATONS</h4>
@@ -250,11 +236,11 @@ export default function Contact() {
               </>
             )}
           </div>
-        </div>
       </>: <Accordion />}
+        </div>
       <div className={styles.bottom}>
         <h3 className={styles.heading}>Corporate Details!</h3>
-        <div>
+        <div className={styles.location}>
           <p>Trendsta Brands Pvt. Ltd <br />
             Hatiyara, subashpally <br />
             Gorund Floor, Jazzz House,<br />

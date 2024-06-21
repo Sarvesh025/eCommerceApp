@@ -181,10 +181,8 @@ const AccItem = ({ accordionUnitData }) => {
 
 
 const Accordion = ({ accordionData = data }) => {
-
-
     return (
-        <div>
+        <div style={{width:'100%'}}>
             {
                 accordionData.map((item, index) => {
                     return (
