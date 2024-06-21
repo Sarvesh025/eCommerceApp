@@ -4,6 +4,9 @@ import Card from '../Card/index'
 import { useRef } from 'react'
 import { useNavigate } from "react-router-dom";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 export default function index({title, data, scrollAnimation}) {
     const [prevBtn, setPrevBtn] = useState('none');
@@ -17,6 +20,10 @@ export default function index({title, data, scrollAnimation}) {
     if(Number(ref.current?.scrollWidth) > Number(ref.current?.clientWidth)){
         setNextBtn('flex');
     }
+
+    AOS.init({
+      duration: 2000,
+    })
   }, [])
 
   
@@ -46,12 +53,6 @@ export default function index({title, data, scrollAnimation}) {
     ref.current?.scrollBy(Number(ref.current?.clientWidth), 0);
   }
 
-
-
-  function handelClick(e){
-
-  }
-
 return (   
     <div className={styles.section}>
       <div className={styles.heading}>
@@ -65,7 +66,7 @@ return (
         <div ref={ref} className={styles.cards} onScroll={handelScroll}>
 
           {data.map((element, index)=>(
-            <Card key={index} id={element.id} img={element.img} desc={element.desc} click={handelClick}/>
+            <Card key={index} id={element.id} img={element.img} desc={element.desc} price={element.price} scrollAnimation="fade-bottom"/>
           ))}
 
         </div>

@@ -3,12 +3,13 @@
     min-width: calc((100vw/1920)*300);
     max-width: calc((100vw/1920)*300);
     background: #999b9d;
-    box-shadow: 0px 0px 2px 0px black;
+    box-shadow: 0px 0px 5px 0px black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     font-size: calc((100vw/1920)*20);
+    scale: 1;
 }
 
 .image{
@@ -17,12 +18,31 @@
   border: 1px solid green;
   cursor: pointer;
   position: relative;
+  /* z-index: 9999; */
+}
+
+.price{
+  position: absolute;
+  height: 20px;
+  min-width: 50px;
+  bottom: 0;
+  right: 0;
+  background-color: #f4c85e;
+  box-shadow: 0px 0px 2px 0px black;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 3px 0 0 0;
 }
 
 .description{
   height: 10%;
   display: flex;
   align-items: center;
+}
+
+.card:hover{
+  scale: 1.1;
 }
 
 @media screen and (max-width: 1100px){

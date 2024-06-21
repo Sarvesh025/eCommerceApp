@@ -4,6 +4,7 @@ const initialState = {
     value: {
       image :'',
       desc : '',
+      price:'',
       id: ''
     }
   }

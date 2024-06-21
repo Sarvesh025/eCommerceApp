@@ -37,7 +37,7 @@ export default function Home() {
           <Quality />
         </LazyLoader>
       </Suspense>
-        {data.img && data.desc && data.id && <OrderOurProduct img={data.img} desc={data.desc} id={data.id} />}
+        {data.img && data.desc && data.id && data.price && <OrderOurProduct img={data.img} desc={data.desc} id={data.id} />}
       <Whatsapp />
     </div>
   )

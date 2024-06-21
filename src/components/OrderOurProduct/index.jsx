@@ -5,7 +5,7 @@ import { FcSelfServiceKiosk } from 'react-icons/fc';
 import emailjs from '@emailjs/browser'
 import { useDispatch } from 'react-redux';
 import { cancelOrder } from '../../redux/designs/orderSlice';
-export default function index({ img, desc, id }) {
+export default function index({ img, desc, id, price }) {
 
     const [form, setForm] = useState({
         email: '',
@@ -105,6 +105,7 @@ export default function index({ img, desc, id }) {
         dispatch(cancelOrder({
             img : '',
             desc : '',
+            price : '',
             id : ''
           }));
     };
@@ -119,19 +120,6 @@ export default function index({ img, desc, id }) {
             if(verify.small || verify.medium || verify.large || verify.extraLarge){
                 if(verify.email){
                     if(verify.pincode){
-                        // alert(`
-                        // CUSTOMER'S DETAILS :-
-                        // Email : ${form.email}
-                        // phone : ${form.phone}
-                        // Pincode : ${form.pincode}
-                        // Address : ${form.address}
-                        
-                        // ORDER'S DETAILS :-
-                        // Item : ${desc}
-                        // ${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}
-                        // `);
-                        //     window.open(`https://wa.me/918420836758?text=${encodeURIComponent(`CUSTOMER'S DETAILS :-\nEmail : ${form.email}\nphone : ${form.phone}\nPincode : ${form.pincode}\nAddress : ${form.address}\n\nORDER'S DETAILS :-\nItem : ${desc}\n${form.small && `Small : ${form.small} \n`} ${form.medium && `Medium : ${form.medium} \n`} ${form.large && `Large : ${form.large} \n`} ${form.extraLarge && `Extra-large : ${form.extraLarge}`}`)}`)            
-                  
                         try{
                             emailjs.sendForm('service_ot234zj', 'template_pc0esy8', e.target, 'JcKFmMIAXfLnLokyT');
                             alert('Your order has been placed successfully!');
