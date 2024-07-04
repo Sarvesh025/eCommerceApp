@@ -66,7 +66,7 @@ return (
         <div ref={ref} className={styles.cards} onScroll={handelScroll}>
 
           {data.map((element, index)=>(
-            <Card key={index} id={element.id} img={element.img} desc={element.desc} price={element.price} scrollAnimation="fade-bottom"/>
+            <Card key={index} id={element.id} img={element.img} name={element.name} desc={element.desc} price={element.price} offer={element.offer} scrollAnimation="fade-bottom"/>
           ))}
 
         </div>

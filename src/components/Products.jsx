@@ -11,20 +11,20 @@ const container = {
 export default function Products() {
  
   const recomended = [
-    { img: "/assets/1.png", desc: "Image-1", id:'1', price: 200},
-    { img: "/assets/2.png", desc: "Image-2", id:'2', price: 200},
-    { img: "/assets/3.png", desc: "Image-3", id:'3', price: 200},
-    { img: "/assets/4.png", desc: "Image-4", id:'4', price: 200},
-    { img: "/assets/5.png", desc: "Image-5", id:'5', price: 200},
-    { img: "/assets/6.png", desc: "Image-6", id:'6', price: 200},
-    { img: "/assets/7.png", desc: "Image-7", id:'7', price: 200},
-    { img: "/assets/1.png", desc: "Image-1", id:'1', price: 200},
-    { img: "/assets/2.png", desc: "Image-2", id:'2', price: 200},
-    { img: "/assets/3.png", desc: "Image-3", id:'3', price: 200},
-    { img: "/assets/4.png", desc: "Image-4", id:'4', price: 200},
-    { img: "/assets/5.png", desc: "Image-5", id:'5', price: 200},
-    { img: "/assets/6.png", desc: "Image-6", id:'6', price: 200},
-    { img: "/assets/7.png", desc: "Image-7", id:'7', price: 200},
+    { img: "/assets/1.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'1', price: 200, offer: 0},
+    { img: "/assets/2.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'2', price: 200, offer: 10},
+    { img: "/assets/3.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'3', price: 200, offer: 50},
+    { img: "/assets/4.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'4', price: 200, offer: 100},
+    { img: "/assets/5.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'5', price: 200, offer: 50},
+    { img: "/assets/6.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'6', price: 200, offer: 50},
+    { img: "/assets/7.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'7', price: 200, offer: 50},
+    { img: "/assets/1.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'1', price: 200, offer: 50},
+    { img: "/assets/2.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'2', price: 200, offer: 50},
+    { img: "/assets/3.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'3', price: 200, offer: 50},
+    { img: "/assets/4.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'4', price: 200, offer: 50},
+    { img: "/assets/5.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'5', price: 200, offer: 50},
+    { img: "/assets/6.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'6', price: 200, offer: 50},
+    { img: "/assets/7.png", name: "Tshirt-Name", desc: "T-shirt-Description", id:'7', price: 200, offer: 50},
   ];
 
   return (

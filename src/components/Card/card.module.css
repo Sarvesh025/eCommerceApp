@@ -1,30 +1,41 @@
 .card {
-    height: calc((100vw/1920)*400);
-    min-width: calc((100vw/1920)*300);
-    max-width: calc((100vw/1920)*300);
-    background: #999b9d;
-    box-shadow: 0px 0px 5px 0px black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: calc((100vw/1920)*20);
-    scale: 1;
-}
-
-.image{
-  width: 95%;
-  height: 80%;
-  border: 1px solid green;
+  min-width: calc((100vw / 1920)* 350);
+  max-width: calc((100vw / 1920)* 350);
+  background: white;
+  color: black;
+  box-shadow: -2px -2px 10px 0px black;
+  border: calc((100vw/1920)*10) outset white;
+  border-style: outset;
+  display: grid;
+  grid-template-rows: auto auto;
+  font-size: calc((100vw/1920)*20);
+  box-sizing: border-box;
   cursor: pointer;
-  position: relative;
-  /* z-index: 9999; */
 }
 
-.price{
-  position: absolute;
-  height: 20px;
-  min-width: 50px;
+.cardDetails {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  text-align: center;
+  padding: calc((100vw/1920)*10) calc((100vw/1920)*30);
+  gap: calc((100vw/1920)*5);
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image {
+  position: relative;
+  scale: 1;
+}
+
+/* .price{
+    position: absolute;
+    height: 20px;
+    min-width: 50px;
   bottom: 0;
   right: 0;
   background-color: #f4c85e;
@@ -33,24 +44,34 @@
   text-align: center;
   font-size: 12px;
   border-radius: 3px 0 0 0;
-}
+} */
 
-.description{
+/* .description{
   height: 10%;
   display: flex;
   align-items: center;
+} */
+
+.card:hover {
+  background: #f2c94a;
+  box-shadow: none;
+
+  >.image {
+    scale: 0.9;
+  }
 }
 
-.card:hover{
-  scale: 1.1;
-}
+@media screen and (max-width: 1100px) {
+  .card {
+    min-width: calc((100vw / 393)* 180);
+    max-width: calc((100vw / 393)* 180);
+    border-width: calc((100vw/393)*5);
+    font-size: calc((100vw/393)*12);
+  }
 
-@media screen and (max-width: 1100px){
-    .card{
-        height: calc((100vw / 393)* 300);
-        min-width: calc((100vw / 393)* 180);
-        max-width: calc((100vw / 393)* 180);
-        font-size: calc((100vw/393)*12);
-    }
-    
+  .cardDetails{
+    padding: calc((100vw/393)*10) calc((100vw/393)*10);
+    gap: calc((100vw/393)*5);
+  }
+
 }
