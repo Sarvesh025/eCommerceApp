@@ -6,7 +6,6 @@ const Quality = React.lazy(() => import('../components/Quality'));
 const Reviews = React.lazy(() => import('../components/Reviews'));
 const OrderOurProduct = React.lazy(() => import('../components/OrderOurProduct'));
 import Whatsapp from '../components/Whatsapp'
-import { useSelector } from 'react-redux';
 import { Suspense } from 'react'
 import LazyLoader from '../components/LazyLoader'
 
@@ -14,7 +13,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 export default function Home() {
-  const data = useSelector((state) => state.order.value);
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -37,7 +35,6 @@ export default function Home() {
           <Quality />
         </LazyLoader>
       </Suspense>
-        {data.img && data.desc && data.id && data.price && <OrderOurProduct img={data.img} desc={data.desc} id={data.id} />}
       <Whatsapp />
     </div>
   )

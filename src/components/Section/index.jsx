@@ -65,8 +65,8 @@ return (
       <div style={{ display:'flex', alignItems:'center'}} data-aos={scrollAnimation}>
         <div ref={ref} className={styles.cards} onScroll={handelScroll}>
 
-          {data.map((element, index)=>(
-            <Card key={index} id={element.id} img={element.img} name={element.name} desc={element.desc} price={element.price} offer={element.offer} scrollAnimation="fade-bottom"/>
+          {data.map((element)=>(
+            <Card data={element} scrollAnimation="fade-bottom"/>
           ))}
 
         </div>

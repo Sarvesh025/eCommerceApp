@@ -15,84 +15,333 @@ export default function services() {
 
   const men = [
     {
-      design:'assets/1.png',
-      name: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'men name-1',
+      desc: 'description-1',
+      id:'1',
+      price: 100,
+      offer: 20
     },
     {
-      design:'assets/1.png',
-      name: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'men name-2',
+      desc: 'description-2',
+      id:'2',
+      price: 100,
+      offer: 30
     },
     {
-      design:'assets/1.png',
-      name: '',
-      id:'',
-      price: 0
-    }
+      img:"/assets/1.png",
+      name:'men name-3',
+      desc: 'description-3',
+      id:'3',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'men name-1',
+      desc: 'description-1',
+      id:'4',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'men name-2',
+      desc: 'description-2',
+      id:'5',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'men name-3',
+      desc: 'description-3',
+      id:'6',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'men name-1',
+      desc: 'description-1',
+      id:'7',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'men name-2',
+      desc: 'description-2',
+      id:'8',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'men name-3',
+      desc: 'description-3',
+      id:'9',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'men name-1',
+      desc: 'description-1',
+      id:'10',
+      price: 100,
+      offer: 20
+    },
   ];
 
   const women = [
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'women name-1',
+      desc: 'description-1',
+      id:'1',
+      price: 100,
+      offer: 20
     },
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'women name-2',
+      desc: 'description-2',
+      id:'2',
+      price: 100,
+      offer: 30
     },
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
-    }
+      img:"/assets/1.png",
+      name:'women name-3',
+      desc: 'description-3',
+      id:'3',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'women name-1',
+      desc: 'description-1',
+      id:'4',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'women name-2',
+      desc: 'description-2',
+      id:'5',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'women name-3',
+      desc: 'description-3',
+      id:'6',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-1',
+      desc: 'description-1',
+      id:'7',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'women name-2',
+      desc: 'description-2',
+      id:'8',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'women name-3',
+      desc: 'description-3',
+      id:'9',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'women name-1',
+      desc: 'description-1',
+      id:'10',
+      price: 100,
+      offer: 20
+    },
   ];
+
   const kids = [
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'kid name-1',
+      desc: 'description-1',
+      id:'1',
+      price: 100,
+      offer: 20
     },
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'kid name-2',
+      desc: 'description-2',
+      id:'2',
+      price: 100,
+      offer: 30
     },
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
-    }
+      img:"/assets/1.png",
+      name:'kid name-3',
+      desc: 'description-3',
+      id:'3',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-1',
+      desc: 'description-1',
+      id:'4',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-2',
+      desc: 'description-2',
+      id:'5',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-3',
+      desc: 'description-3',
+      id:'6',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-1',
+      desc: 'description-1',
+      id:'7',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-2',
+      desc: 'description-2',
+      id:'8',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-3',
+      desc: 'description-3',
+      id:'9',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'kid name-1',
+      desc: 'description-1',
+      id:'10',
+      price: 100,
+      offer: 20
+    },
   ];
   const couples = [
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'couple name-1',
+      desc: 'description-1',
+      id:'1',
+      price: 100,
+      offer: 20
     },
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
+      img:"/assets/1.png",
+      name:'couple name-2',
+      desc: 'description-2',
+      id:'2',
+      price: 100,
+      offer: 30
     },
     {
-      design:'assets/1.png',
-      desc: '',
-      id:'',
-      price: 0
-    }
+      img:"/assets/1.png",
+      name:'couple name-3',
+      desc: 'description-3',
+      id:'3',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'couple name-1',
+      desc: 'description-1',
+      id:'4',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'couple name-2',
+      desc: 'description-2',
+      id:'5',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'couple name-3',
+      desc: 'description-3',
+      id:'6',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'couple name-1',
+      desc: 'description-1',
+      id:'7',
+      price: 100,
+      offer: 20
+    },
+    {
+      img:"/assets/1.png",
+      name:'couple name-2',
+      desc: 'description-2',
+      id:'8',
+      price: 100,
+      offer: 30
+    },
+    {
+      img:"/assets/1.png",
+      name:'couple name-3',
+      desc: 'description-3',
+      id:'9',
+      price: 100,
+      offer: 50
+    },
+    {
+      img:"/assets/1.png",
+      name:'couple name-1',
+      desc: 'description-1',
+      id:'10',
+      price: 100,
+      offer: 20
+    },
   ];
 
 

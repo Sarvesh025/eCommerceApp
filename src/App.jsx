@@ -11,16 +11,12 @@ const Orders = React.lazy(()=> import ('./pages/Orders'));
 const Product = React.lazy(()=> import ('./pages/Product'));
 const Wishlist = React.lazy(()=> import ('./pages/Wishlist'));
 const Notifications = React.lazy(()=> import ('./pages/Notifications'));
-// import Upload from './pages/Upload'
-// import Orders from './pages/Orders'
-// import Wishlist from './pages/Wishlist'
-// import Notifications from './pages/Notifications'
-// import Product from './pages/Product'
 import Navbarcontainer from './components/Navbarcontainer'
 import Navbar2 from './components/Navbar2'
-// import About from './pages/About/index'
-// import Contact from './pages/Contact'
+import OrderOurProduct from './components/OrderOurProduct';
 import NavModal from './components/navModal/NavModal'
+import Catagories from './pages/Categories';
+import { useSelector } from 'react-redux';
 
 function App() {
 
@@ -34,6 +30,7 @@ function App() {
     }
   }
 
+  const data = useSelector((state) => state.order.value);
 
   return (
     <>
@@ -41,7 +38,7 @@ function App() {
         <NavModal isO={isOpen} setOpen={setOpen} />
         <Navbarcontainer isOpen={isOpen} setOpen={setOpen} />
         {/* <RouteRender/> */}
-      
+        {data.img && data.desc && data.id && data.price && <OrderOurProduct img={data.img} desc={data.desc} id={data.id} />}
         <div style={isOpen? { height:'0vh', overflow:'hidden'} :{ display: 'flex', flexDirection: 'column' }}>
             <Suspense fallback={<h1>Loading...</h1>}>
           <Routes>
@@ -54,6 +51,7 @@ function App() {
             <Route path='/wishlist' element={<Wishlist />} />
             <Route path='/notifications' element={<Notifications />} />
             <Route path='/product/:name' element={<Product />} />
+            <Route path='/categories/:filter?' element={<Catagories />} />
           </Routes>
             </Suspense>
         </div>

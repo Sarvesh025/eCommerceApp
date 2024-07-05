@@ -1,0 +1,37 @@
+.categories{
+    position: relative;
+    padding: calc((100vw / 1920)*30) 0;
+}
+
+.title{
+    position: sticky;
+    z-index: 9999;
+    top: calc((100vw / 1920)*18);
+    text-align: center;
+    mix-blend-mode: difference;
+    font-size: calc((100vw / 1920)*70);
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:calc((100vw / 1920)* 40);
+    padding: calc((100vw / 1920)* 50);
+}
+
+@media screen and (max-width:1100px) {
+    .categories {
+        padding: calc((100vw / 393)*25) 0;
+    }
+
+    .products{
+        gap: calc((100vw / 393)* 12);
+        padding: calc((100vw / 393)*25) calc((100vw / 393)*10);
+    }
+    .title{
+        top: calc((100vw / 393)*12);
+        font-size: calc((100vw / 393)* 35);
+    }
+}
