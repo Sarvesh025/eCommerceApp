@@ -17,6 +17,8 @@ import OrderOurProduct from './components/OrderOurProduct';
 import NavModal from './components/navModal/NavModal'
 import Catagories from './pages/Categories';
 import { useSelector } from 'react-redux';
+import RouteNotFound from './components/RouteNotFound';
+import AdminPortal from './pages/AdminPortal';
 
 function App() {
 
@@ -52,6 +54,8 @@ function App() {
             <Route path='/notifications' element={<Notifications />} />
             <Route path='/product/:name' element={<Product />} />
             <Route path='/categories/:filter?' element={<Catagories />} />
+            <Route path='/admin' element={<AdminPortal />} />
+            <Route path='/*' element={<RouteNotFound />} />
           </Routes>
             </Suspense>
         </div>

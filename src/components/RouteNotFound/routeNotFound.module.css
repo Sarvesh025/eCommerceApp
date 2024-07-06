@@ -1,0 +1,66 @@
+.routeNotFound{
+    padding: calc((100vw/1920)*150);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background: white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: calc((100vw/1920)*350);
+    width: calc((100vw/1920)*500);
+    background: url(/assets/errorShirt.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.errorMessage{
+    width: 50%;
+    height: 80%;
+    color: white;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.errorMessage h1{
+    font-size: calc((100vw/1920)*25);
+}
+
+.errorMessage p{
+    font-size: calc((100vw/1920)*17);
+}
+
+.backBtn{
+    font-size: calc((100vw/1920)*17);
+}
+
+@media screen and (max-width:1100px){
+    .routeNotFound{
+        padding: calc((100vw / 393)* 206) calc((100vw / 393)* 25);
+    }
+    .container{
+        height: calc((100vw / 393)* 400);
+        width: calc((100vw / 393)* 345);
+        align-items: center;
+    }
+    .errorMessage{
+         width: 50%;
+         height: 50%;
+         align-items: end;
+     }
+     .errorMessage h1{
+        font-size: calc((100vw/393)*20);
+    }
+    
+    .errorMessage p{
+        font-size: calc((100vw/393)*10);
+    }
+    .backBtn{
+        font-size: calc((100vw/393)*17);
+    }
+}
